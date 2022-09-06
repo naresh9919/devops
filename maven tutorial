@@ -1,6 +1,4 @@
-Prerequisites
-A newly deployed or existing CentOS 7 server instance.
-Java Development Kit (JDK) – Maven 3.3+ require JDK 1.7 or above to execute.
+maven installation
 
 
 # yum install -y java-1.8.0-openjdk-devel
