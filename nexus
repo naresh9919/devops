@@ -1,0 +1,50 @@
+                                            SONATYPE NEXUS
+
+Sonatype Nexus System Requirements
+
+
+Minimum 1 VCPU & 2 GB Memory
+Server firewall opened for port 22 & 8081
+OpenJDK 8
+All Nexus processes should run as a non-root nexus user.
+
+Step 1: Login to your Linux server and update the yum packages. Also install required utilities.
+
+# sudo yum update -y
+# sudo yum install wget -y
+
+Step 2: Install OpenJDK 1.8
+
+# sudo yum install java-1.8.0-openjdk.x86_64 -y
+# cd /opt/
+# sudo wget -O nexus.tar.gz https://download.sonatype.com/nexus/3/latest-unix.tar.gz
+# sudo mv nexus-3* nexus
+
+
+Step 5: As a good security practice, it is not advised to run nexus service with root privileges. So create a new user named nexus to run the nexus service.
+
+# sudo adduser nexus
+# sudo chown -R nexus:nexus /app/nexus
+# sudo chown -R nexus:nexus /app/sonatype-work
+
+Step 6: Open /app/nexus/bin/nexus.rc file
+
+# sudo vi  /app/nexus/bin/nexus.rc
+
+     run_as_user="nexus"
+
+# sudo chkconfig nexus on
+
+# sudo systemctl start nexus
+
+visit http://public IP:8081. You will be able to see the nexus homepage
+
+Default username is admin
+
+admin password in /app/sonatype-work/nexus3/admin.password
+
+# cat /app/sonatype-work/nexus3/admin.password
+
+# sudo systemctl restart nexus
+
+
