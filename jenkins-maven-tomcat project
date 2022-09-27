@@ -47,5 +47,44 @@
                    MAVEN INSTALLATION
 
 
+Install Apache Maven
 
+# cd /opt/
+# wget https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz
+# tar -xf apache-maven-3.8.6-bin.tar.gz
+# mv apache-maven-3.8.6/ maven/
+
+Configure Apache Maven Environment
+
+# cd /etc/profile.d/
+# vim maven.sh
+
+# Apache Maven Environment Variables
+# MAVEN_HOME for Maven 1 - M2_HOME for Maven 2
+export M2_HOME=/usr/local/src/apache-maven
+export PATH=${M2_HOME}/bin:${PATH}
+
+# chmod +x maven.sh
+# source /etc/profile.d/maven.sh
+
+Check Apache Maven Version
+
+# mvn --version
+
+
+Setup maven project on jenkins
+
+# install maven integration pluggin
+
+How to install plugings
+
+--> manage jenkins --> manage plugings --> available --> select plugings --> install without restart
+
+how to add path on global tool configuration
+
+--> manage jenkins --> global tool configuration --> maven --> home=maven 3.8 --> maven_home= /opt/maven --> save
                    
+
+                              TOMCAT INSTALLATION
+ 
+
