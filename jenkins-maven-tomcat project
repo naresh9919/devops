@@ -88,3 +88,32 @@ how to add path on global tool configuration
                               TOMCAT INSTALLATION
  
 
+Install Apache Tomcat
+Ec2 instance
+
+cd /opt
+wget https://archive.apache.org/dist/tomcat/tomcat-7/v7.0.106/bin/apache-tomcat-7.0.106.tar.gz   
+tar -xvzf apache-tomcat-7.0.106.tar.gz
+mv apache-tomcat-7.0.106 tomcat
+cd tomcat
+cd bin
+sh startup.sh 
+shutdown.sh
+
+1. Update users information in the tomcat-users.xml file
+
+<role rolename="manager-script"/>
+  <role rolename="manager-gui"/>
+  <role rolename="manager-jmx"/>
+  <role rolename="manager-status"/>
+  <role rolename="admin-gui"/>
+<user username="tomcat" password="tomcat" roles="manager-script,admin-gui,manager-gui,manager-jmx,manager-status"/>
+
+
+chmod +x /opt/tomcat/bin/startup.sh
+
+Check point :
+access tomcat application from browser on port 8080  
+ - http://<Public_IP>:8080
+username : tomcat
+password : tomcat
