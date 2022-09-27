@@ -1,3 +1,6 @@
+         Deploy a WAR file on Tomcat Server using Jenkins
+
+
 # Install Jenkins on AWS EC2
 
 ### Prerequisites
@@ -91,6 +94,9 @@ how to add path on global tool configuration
 Install Apache Tomcat
 Ec2 instance
 
+# yum install -y java-1.8.0-openjdk-devel
+# java -version
+
 cd /opt
 wget https://archive.apache.org/dist/tomcat/tomcat-7/v7.0.106/bin/apache-tomcat-7.0.106.tar.gz   
 tar -xvzf apache-tomcat-7.0.106.tar.gz
@@ -117,3 +123,35 @@ access tomcat application from browser on port 8080
  - http://<Public_IP>:8080
 username : tomcat
 password : tomcat
+
+              Deploy to container Plugin installation
+
+jenkins--> Manage plugin --> available --> deploy to container--> Click Install without restart
+
+
+Manage Jenkins --> manage Credentials --> add Credentials
+username : tomcat
+password : tomcat
+id : tomcat-user
+descripition : tomcat-username-password
+click on add
+
+DEPLOY WARFILE ON TOMCAT USING TOMCAT
+
+go to the jenkins--> new item --> item name : deploying war file
+select maven project --> ok
+description : deploying war file on tomcat
+source code management : git
+
+Build : pom.xml --> clean install
+
+# Post Build Action
+   deploy war/ear to a container
+   WAR/EAR files : **/*.war
+   contest path : ----
+   containers : tomcat 7.x remote
+               credentials : 
+               tomcat url : http://13.232.221.139:8080/
+               apply and save
+  Build now
+  build is successful
