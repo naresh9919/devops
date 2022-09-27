@@ -1,5 +1,8 @@
 Install Apache Tomcat
 
+# yum install -y java-1.8.0-openjdk-devel
+# java -version
+
 cd /opt
 wget https://archive.apache.org/dist/tomcat/tomcat-7/v7.0.106/bin/apache-tomcat-7.0.106.tar.gz   
 tar -xvzf apache-tomcat-7.0.106.tar.gz
