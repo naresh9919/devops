@@ -4,20 +4,24 @@ Sonarqube is free great tool which is most popular tool all over the world and u
 
 Installation and setup sonarqube server on centos
 
-# yum install java-1.8.0-openjdk unzip –y
+# amazon-linux-extras install java-openjdk11 -y
 
-After installing java we need to verify the java version using the below command.
-[root@localhost ~]# java -version
-openjdk version "1.8.0_191"
-OpenJDK Runtime Environment (build 1.8.0_191-b12)
-OpenJDK 64-Bit Server VM (build 25.191-b12, mixed mode)
 
 [root@localhost ~]# cd /opt
 
-# wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-6.4.zip
+# wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.9.9.56886.zip
 
-#unzip sonarqube-6.4.zip
-#mv sonarqube-6.4 sonarqube
+# unzip sonarqube-8.9.9.56886.zip
+# mv sonarqube-8.9.9.56886 sonarqube
+# cd sonarqube
+# cd logs
+# useradd sonaradmin
+# chown -R sonaradmin:sonaradmin /opt/sonarqube
+# su - sonaradmin
+# cd /opt/sonarqube/bin
+# cd linux-x86-64
+# ./sonar.sh start
+# ./sonar.sh status
 
 To start sonarqube service we need to go “/opt/sonarqube/bin/linux-x86-64” directory and execute the below command.
 
@@ -25,3 +29,5 @@ To start sonarqube service we need to go “/opt/sonarqube/bin/linux-x86-64” d
 After starting this service we open the browser and type the following url to access the sonar web interface.
 
 http:// server-ip address:9000
+
+after login to sonarqube you need to change password
