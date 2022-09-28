@@ -36,3 +36,26 @@ after login to sonarqube you need to change password
                            SONARQUBE INTEGRATION ON JENKINS
 
 
+# install sonar scanner pluggin
+
+How to install plugings
+
+--> manage jenkins --> manage plugings --> available --> select plugings --> install without restart
+
+--> go to sonarqube --> create project and generate key --> save anywhere
+
+how to add path on global tool configuration
+
+--> manage jenkins --> global tool configuration --> SonarQube Scanner --> home=sonarqube 4.7.0 --> install automatically-->save
+
+--> Manage Jenkins --> Credentials --> add 	secret text --> id: sonarqube password (sonar-user-password) --> save
+
+Run freestyle project
+
+--> new item --> freestyle project --> description= this sonar project implementation --> git source code url --> build enviranment (time stamp)
+      build ( invokar top level maven targets) --> goals (clean install sonar:sonar) --> save --> build now --> select project --> console output successed
+
+ANALYSIS SUCCESSFUL, you can browse http://13.126.63.197:9000/dashboard?id=com.example.app%3ASimpleTomcatWebApp
+
+copy and open on anothe tabe it will displey code quality
+      
