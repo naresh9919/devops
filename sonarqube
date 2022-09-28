@@ -31,3 +31,8 @@ After starting this service we open the browser and type the following url to ac
 http:// server-ip address:9000
 
 after login to sonarqube you need to change password
+
+
+                           SONARQUBE INTEGRATION ON JENKINS
+
+
