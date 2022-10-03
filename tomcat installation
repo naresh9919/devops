@@ -13,6 +13,7 @@ sh startup.sh
 shutdown.sh
 
 1. Update users information in the tomcat-users.xml file
+
 cd conf
 vim tomcat-users.xml
 
