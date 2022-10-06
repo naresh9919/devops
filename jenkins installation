@@ -53,8 +53,8 @@ yum -y install jenkins
    ### Start Jenkins
    ```sh
 
-Start jenkins service
-service jenkins start
+Service jenkins start
+service jenkins status
 
 # Setup Jenkins to start at boot,
 
