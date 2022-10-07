@@ -16,6 +16,7 @@ Installation and setup sonarqube server on centos
 # cd sonarqube
 # cd logs
 # useradd sonaradmin
+# passwd sonaradmin
 # chown -R sonaradmin:sonaradmin /opt/sonarqube
 # su - sonaradmin
 # cd /opt/sonarqube/bin
