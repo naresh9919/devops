@@ -2,7 +2,7 @@
 
 ## Install Java
    
-sudo amazon-linux-extras install java-openjdk
+sudo amazon-linux-extras install java-openjdk11
 java -version
    
 vi ~/.bash_profile
