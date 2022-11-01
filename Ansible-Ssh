@@ -1,0 +1,38 @@
+Enable Passwordless Authenication Between Linux Machine
+
+Ansible:
+1.	Create a new user for ansible administration & grant admin access to user
+2.	useradd ansadmin
+3.	passwd ansadmin
+
+5.	visudo
+	
+ansadmin ALL=(ALL) NOPASSWD: ALL
+
+vi /etc/ssh/sshd_config  PasswordAuthentication yes/'
+
+service sshd restart
+
+Tomcat:
+1.	Create a new user for ansible administration & grant admin access to user
+
+2.	useradd ansadmin
+3.	passwd ansadmin
+
+4.	Add below lines to visudo
+5.	visudo
+6.	ansadmin ALL=(ALL) NOPASSWD: ALL
+
+7.	Using key-based authentication is advised. If you are still at learning stage use password based authentication:
+sed -ie 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+
+8.	Restart sshd service
+service sshd restart
+
+Ansible:
+1.	Login as a ansadmin user
+su - ansadmin
+2.	Generate SSH
+ssh-keygen
+3.	Copy keys onto Host 2
+ssh-copy-id <Host 1 IP address>
