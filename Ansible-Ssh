@@ -43,7 +43,18 @@ service sshd restart
 Ansible:
 1.	Login as a ansadmin user
 su - ansadmin
+
 2.	Generate SSH
 ssh-keygen
-3.	Copy keys onto Host 2
-ssh-copy-id <Host 1 IP address>
+
+ssh-copy-id <Host IP address>
+ssh node IP (you can login to the node server succussfully)
+exit
+
+sudo vi /etc/ansible/hosts
+(remove all the text)
+
+[all_hosts]
+node IPs
+
+ansible all -m ping  (it will ping for all the node systems)
