@@ -1,3 +1,14 @@
+Installing Ansible On Amazon Linux
+yum install ansible --enablerepo=epel
+
+OR
+
+rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+yum install ansible -y
+
+ansible --version
+
+
 Enable Passwordless Authenication Between Linux Machine
 
 Ansible:
