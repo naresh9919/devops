@@ -48,4 +48,28 @@ admin password in /opt/sonatype-work/nexus3/admin.password
 
 # sudo systemctl restart nexus
 
+# install pluggin - nexus artifact uploader
+
+create new job:---
+
+
+
+go to the jenkins --> newjob --> nexusproject --> maven project --> ok
+
+add build step --> nexus artifact uploader --> select nexus version
+
+give nexus url (remove http and '/')
+
+credentitals
+
+group id :
+version : 
+repository : name :maven-snapshots
+artifact id:
+type : war or jar
+file : **/*.jar (search for Building jar (copy the link and paste here))
+save and build now
+
+and copy the file and paste on the crome you can get the result
+or go to the nexus --> click on the repository you will get the jar file
 
