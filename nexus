@@ -78,19 +78,19 @@ or go to the nexus --> click on the repository you will get the jar file
 Create a Repository in Nexus
 
 Step 1:
-Follow the below-mentioned steps to create a hosted repository, name it  maven-nexus-repo, which you are going to use throughout this guide.
+create a hosted repository, name it  maven-nexus-repo
+
 Step 2:
-On the Create Repository page
 Enter the name as maven-nexus-repo
 In Version Policy, select the Mixed type of artifacts.
-Under the Hosted section, in Deployment policy, select Allow redeploy.  It will allow you to deploy an application multiple times.
-Step 3:
-To create a new user, go to Dashboard > Server Administrator and Configuration > User > Create user. Select Local user type which happens to be the default Realm:
+Under the Hosted section, in Deployment policy, select Allow redeploy.
 
- the Create User page
-ID: Enter the desired ID; in our case, it is jenkins-user.
-First Name: Enter the desired first name; in our case, it is Jenkins.
-Last Name: Enter the desired second name; in our case, it is User.
+Step 3:
+
+User > Create user
+ID: jenkins-user.
+First Name: Jenkins.
+Last Name: User.
 Email: Enter your email address.
-Status: Select Active from your drop-down menu.
-Roles: Make sure that you grant the nx-admin role to your user.
+Status: Select Active
+Roles:nx-admin role to your user.
