@@ -10,28 +10,20 @@ JFrog Artifactory is a universal DevOps solution providing end-to-end automation
 ## Installation Steps 
 
 1. Login to instance as a `root` user and install Java
-   ```sh 
+
     yum install java-1.8* -y 
-   ```
+    
 1. Download Artifactory packages onto /opt/   
    For Latest version of Artifactory OSS [download it from here](https://jfrog.com/open-source/)   
 For Older version of Artifactory OSS [download it from here](https://jfrog.bintray.com/artifactory/)   
 For Latest version of Artifactory Pro [download it from here](https://jfrog.com/artifactory/)
 
-   ```sh 
-   cd /opt 
-   wget https://jfrog.bintray.com/artifactory/jfrog-artifactory-oss-6.9.6.zip
-   ```
+cd /opt 
+wget https://jfrog.bintray.com/artifactory/jfrog-artifactory-oss-6.9.6.zip
+unzip jfrog-artifactory-oss-6.9.6.zip
+cd /opt/jfrog-artifactory-oss-6.9.6/bin
+./artifactory.sh start
 
-1. extract artifactory tar.gz file
-   ```sh
-   unzip jfrog-artifactory-oss-6.9.6.zip
-   ```
-1. Go inside to bin directory and start the services
-   ```sh
-   cd /opt/jfrog-artifactory-oss-6.9.6/bin
-   ./artifactory.sh start
-   ```
 1. access artifactory from browser
    ```sh
    http://<PUBLIC_IP_Address>:8081 
