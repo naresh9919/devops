@@ -1,0 +1,24 @@
+Extended E-mail Notification
+
+SMTP server :- smtp.gmail.com
+SMTP Port :- 465
+Credentials :- ynareshbabu1991@gmail.com / gmail security password (jcwkqljchakjwomj)
+Use SSL []
+Enable Debug Mode []
+Default Triggers :- Always
+
+ E-mail Notification
+
+SMTP server :- smtp.gmail.com
+
+Test configuration by sending test e-mail
+Test e-mail recipient :-  ynareshbabu1991@gmail.com
+
+Test configuration
+Apply and save
+
+Manage your Google Account
+Security  2 step verification  on
+App password enterpasswd Your app passwords 
+Select the app and device for which you want to generate the app password.
+Copy the password and save some where.
