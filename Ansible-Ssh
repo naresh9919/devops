@@ -58,3 +58,6 @@ sudo vi /etc/ansible/hosts
 node IPs
 
 ansible all -m ping  (it will ping for all the node systems)
+
+yum install tree -y
+tree /etc/ansible
