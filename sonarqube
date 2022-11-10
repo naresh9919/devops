@@ -60,3 +60,11 @@ ANALYSIS SUCCESSFUL, you can browse http://13.126.63.197:9000/dashboard?id=com.e
 
 copy and open on anothe tabe it will displey code quality
       
+
+
+
+if getting error to install sonarqube 
+
+# useradd sonaradmin
+# passwd sonaradmin
+# chown -R sonaradmin:sonaradmin /opt/
