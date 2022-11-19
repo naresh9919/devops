@@ -4,6 +4,14 @@ Sonarqube is free great tool which is most popular tool all over the world and u
 
 Installation and setup sonarqube server on centos
 
+
+
+Server with minimum 2GB RAM and 1 vCPU capacity
+PostgreSQL version 9.3 or greater.
+OpenJDK 11 or JRE 11
+All Sonarquber processes should run as a non-root sonar user.
+port number : 9000
+
 # amazon-linux-extras install java-openjdk11 -y
 
 
