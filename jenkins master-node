@@ -1,0 +1,31 @@
+JENKINS - MASTER 
+amazon-linux-extras install java-openjdk11 –y
+yum install jenkins –y
+service Jenkins start
+service Jenkins status
+vim jenkins-slave.pem (paste slave pem file)
+chmod 400 jenkins-slave.pem
+JENKINS – NODE	
+Create new pem key for node (Jenkins-slave)
+amazon-linux-extras install java-openjdk11 –y
+
+Go to Jenkins -> manage Jenkins -> manage nodes and clouds -> new node
+
+Permanent agent -> create -> 
+name= Jenkins-slave
+Number of executors = 1
+Remote root directory = ec2-user
+Labels = Jenkins-slave
+Usage = use this node as much as possible
+Launch method = lunch agent via SSH
+Host = lsave private IP
+Credentials = ec2-user	
+Credentials  add
+Kind = SSH username with private key
+ID = Jenkins-slave
+Username = ec2-user
+Private key = paste (slave pem file)
+save
+Host Key Verification Strategy = Manually trusted key verification strategy
+Availability = keep this agent as much as possible
+Save
